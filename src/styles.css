@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: rgb(41, 41, 41)!important;
+}
+.card {
+    border: none!important;
+    box-shadow: 0 3px 12px 5px rgba(0, 0, 0, 0.025);
+    border-radius: 7px;
+    overflow: hidden;
+}
+.movie img {
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+h2 {
+    border-left: 5px solid rgb(172, 15, 15);
+    padding-left: 1rem;
+}

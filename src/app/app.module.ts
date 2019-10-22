@@ -9,6 +9,14 @@ import { MovieAddComponent } from './components/movie-add/movie-add.component';
 import { UserLoginComponent } from './components/user-login/user-login.component';
 import { UserRegisterComponent } from './components/user-register/user-register.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { NavBarComponent } from './components/partials/nav-bar/nav-bar.component';
+import { HomeComponent } from './components/home/home.component';
+import { HeroComponent } from './components/partials/hero/hero.component';
+import { AccountComponent } from './components/account/account.component';
+
+// Import your library
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { CatalogComponent } from './components/catalog/catalog.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +26,17 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
     MovieAddComponent,
     UserLoginComponent,
     UserRegisterComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    NavBarComponent,
+    HomeComponent,
+    HeroComponent,
+    AccountComponent,
+    CatalogComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MovieServiceService } from '../../services/movie-service.service';
 
 @Component({
   selector: 'app-movie-list',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieListComponent implements OnInit {
 
-  constructor() { }
+  movies: any[];
+
+  constructor(private movieService: MovieServiceService) { }
 
   ngOnInit() {
+    this.getMovies();
+  }
+
+  getMovies(): void {
+    this.movies = this.movieService.getMovies();
+  }
+
+  addToFavourites(id): void{
+    this.movieService.addToFavourites(id);
+  }
+
+  isFavourite(id: number): boolean {
+    return this.movieService.isFavourite(id);
   }
 
 }

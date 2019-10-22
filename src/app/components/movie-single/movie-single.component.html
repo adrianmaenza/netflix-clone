@@ -1,1 +1,16 @@
-<p>movie-single works!</p>
+<div class="container py-4">
+    <div class="row">
+        <div class="col-4">
+            <img src="{{ movie.img }}" alt="{{ movie.title }}" class="featured-image">
+        </div>
+        <div class="col-8">
+            <h2 class="text-light">{{ movie.title }}</h2>
+            <p class="text-light">{{ movie.desc }}</p>
+            <p class="text-light">Reeased: {{ movie.released }}</p>
+            <p class="text-light">Director: {{ movie.director }}</p>
+            <p class="text-light">Rating: {{ movie.rated }}</p>
+            <p class="text-light">Genre: {{ movie.genre }}</p>
+            <p class="text-light">Runtime: {{ movie.runtime }}</p>
+        </div>
+    </div>  
+</div>

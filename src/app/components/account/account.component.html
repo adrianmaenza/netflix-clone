@@ -1,0 +1,21 @@
+<div class="container py-4">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4" *ngFor="let movie of favourites">
+                <div class="card mb-4 movie">
+                    <img src="{{ movie.img }}" alt="{{ movie.title }}" srcset="">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <h5 class="d-flex">{{ movie.title }}</h5>
+                            <span class="text-muted ml-auto">{{ movie.released }}</span>
+                        </div>
+                        {{ movie.desc }}
+                    </div>
+                    <div class="card-body d-flex">
+                        <div class="btn-group ml-auto">
+                            <a routerLink="/movie-single/{{ movie.id }}" class="btn-sm btn btn-outline-success">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
